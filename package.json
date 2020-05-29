@@ -1,6 +1,9 @@
 {
   "name": "ember-bootstrap-codemods",
+  "description": "Codemods to ease upgrading of ember-bootstrap",
   "version": "0.1.0",
+  "author": "Simon Ihmig <simon.ihmig@kaliber5.de",
+  "license": "MIT",
   "scripts": {
     "lint": "eslint --cache .",
     "test": "codemod-cli test",
@@ -8,12 +11,16 @@
     "update-docs": "codemod-cli update-docs",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
+  "files": [
+    "bin",
+    "transforms"
+  ],
   "bin": "./bin/cli.js",
   "keywords": [
     "codemod-cli"
   ],
   "dependencies": {
-    "codemod-cli": "^2.1.0"
+    "codemod-cli": "simonihmig/codemod-cli#template-support"
   },
   "devDependencies": {
     "coveralls": "^3.0.6",
@@ -25,7 +32,7 @@
     "prettier": "^2.0.5"
   },
   "engines": {
-    "node": "8.* || 10.* || >= 12"
+    "node": "10.* || >= 12"
   },
   "jest": {
     "testEnvironment": "node"
