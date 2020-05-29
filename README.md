@@ -1,5 +1,6 @@
 # ember-bootstrap-codemods
 
+![CI](https://github.com/kaliber5/ember-bootstrap-codemods/workflows/CI/badge.svg)
 
 A collection of codemod's for ember-bootstrap-codemods.
 
