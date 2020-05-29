@@ -60,9 +60,13 @@
     @tabindex="-1"
     @title="foo"
     @wrap="hard"
-    as |el|
+    as |element|
   >
-    <el.control @some="other"/>
+    <element.control @some="other" placeholder="bar"/>
   </f.element>
   <f.element @property="baz" @label="baz" />
+
+  <SomeOther as |f|>
+    <f.element @foo="bar" @disabled={{true}} />
+  </SomeOther>
 </BsForm>
