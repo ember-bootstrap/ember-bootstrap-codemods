@@ -8,17 +8,18 @@ A collection of codemod's for ember-bootstrap-codemods.
 To run a specific codemod from this project, you would run the following:
 
 ```
-npx ember-bootstrap-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
+npx ember-bootstrap-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.hbs
 
 # or
 
 yarn global add ember-bootstrap-codemods
-ember-bootstrap-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
+ember-bootstrap-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.hbs
 ```
 
 ## Transforms
 
 <!--TRANSFORMS_START-->
+* [deprecated-attribute-arguments](transforms/deprecated-attribute-arguments/README.md)
 <!--TRANSFORMS_END-->
 
 ## Contributing

@@ -1,13 +1,6 @@
 <BsForm @model={{this}} novalidate={{true}} as |f|>
-  <f.element
-    @property="foo"
-    @label="foo"
-  as |el|><el.control accept="image/png" autocapitalize="words" autocomplete="on" autocorrect="off" autofocus={{true}} autosave="someuniquevalue" cols="10" size="10" disabled={{true}} form="myform" inputmode="tel" max="5" maxlength="5" min="5" minlength="5" multiple={{true}} name="foo" pattern="^[0-9]{5}$" placeholder="foo" required={{true}} readonly={{true}} rows="10" spellcheck={{true}} step="2" tabindex="-1" title="foo" wrap="hard" /></f.element>
-  <f.element
-    @property="bar"
-    @label="bar"
-    as |element|
-  >
+  <f.element @property="foo" @label="foo" as |el|><el.control accept="image/png" autocapitalize="words" autocomplete="on" autocorrect="off" autofocus={{true}} autosave="someuniquevalue" cols="10" size="10" disabled={{true}} form="myform" inputmode="tel" max="5" maxlength="5" min="5" minlength="5" multiple={{true}} name="foo" pattern="^[0-9]{5}$" placeholder="foo" required={{true}} readonly={{true}} rows="10" spellcheck={{true}} step="2" tabindex="-1" title="foo" wrap="hard" /></f.element>
+  <f.element @property="bar" @label="bar" as |element|>
     <element.control @some="other" placeholder="bar" accept="image/png" autocapitalize="words" autocomplete="on" autocorrect="off" autofocus={{true}} autosave="someuniquevalue" cols="10" size="10" disabled={{true}} form="myform" inputmode="tel" max="5" maxlength="5" min="5" minlength="5" multiple={{true}} name="foo" pattern="^[0-9]{5}$" required={{true}} readonly={{true}} rows="10" spellcheck={{true}} step="2" tabindex="-1" title="foo" wrap="hard" />
   </f.element>
   <f.element @property="baz" @label="baz" />
