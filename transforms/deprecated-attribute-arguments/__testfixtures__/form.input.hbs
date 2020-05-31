@@ -9,3 +9,10 @@
     <f.element @foo="bar" @disabled={{true}} />
   </SomeOther>
 </BsForm>
+
+<BsForm @model={{this}} as |f|>
+  <f.element
+    @property="foo"
+    @placeholder="foo"
+  />
+</BsForm>
