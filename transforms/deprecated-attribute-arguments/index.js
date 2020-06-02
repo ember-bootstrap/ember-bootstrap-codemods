@@ -96,7 +96,12 @@ function visitor(env) {
         elementStack.push(node);
         const deprecatedArguments = simpleDeprecations[node.tag];
 
-        if (deprecatedArguments) {
+        if (
+          deprecatedArguments &&
+          node.attributes.some(({ name }) =>
+            deprecatedArguments.some((deprAttr) => isMatching(name, deprAttr))
+          )
+        ) {
           node.attributes = node.attributes.map(mapAttributes(deprecatedArguments, b));
           return;
         }
