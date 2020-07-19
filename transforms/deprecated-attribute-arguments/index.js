@@ -58,31 +58,31 @@ function mapAttributes(deprecatedArguments, b) {
   };
 }
 
-function isFormElement(node, elementStack) {
+function componentYieldedBy(node, elementStack) {
   if (node.type !== 'ElementNode') {
-    return false;
+    return null;
   }
 
-  let [yieldName, propery] = node.tag.split('.');
-
-  if (propery !== 'element') {
-    return false;
-  }
+  let [yieldName, property] = node.tag.split('.');
 
   if (elementStack.length < 2) {
-    return false;
+    return null;
   }
 
-  const parentYield = elementStack
+  let parentYield = elementStack
     .slice()
     .reverse()
     .find((attr) => attr.blockParams.includes(yieldName));
 
-  if (!parentYield || parentYield.tag !== 'BsForm') {
-    return false;
-  }
+  return parentYield ? `${parentYield.tag}::${property}` : null;
+}
 
-  return true;
+function isButtonInButtonGroup(node, elementStack) {
+  return componentYieldedBy(node, elementStack) === 'BsButtonGroup::button';
+}
+
+function isFormElement(node, elementStack) {
+  return componentYieldedBy(node, elementStack) === 'BsForm::element';
 }
 
 function visitor(env) {
@@ -94,7 +94,11 @@ function visitor(env) {
     ElementNode: {
       enter(node) {
         elementStack.push(node);
-        const deprecatedArguments = simpleDeprecations[node.tag];
+        let deprecatedArguments = simpleDeprecations[node.tag];
+
+        if (isButtonInButtonGroup(node, elementStack)) {
+          deprecatedArguments = simpleDeprecations.BsButton;
+        }
 
         if (
           deprecatedArguments &&
