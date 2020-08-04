@@ -20,7 +20,7 @@
     "codemod-cli"
   ],
   "dependencies": {
-    "codemod-cli": "simonihmig/codemod-cli#template-support"
+    "codemod-cli": "rwjblue/codemod-cli#1e080835dd8ffecb1e0795a897e6b3b0d1da281d"
   },
   "devDependencies": {
     "coveralls": "^3.0.6",
