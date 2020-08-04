@@ -1668,9 +1668,10 @@ co@^4.6.0:
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
   integrity sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=
 
-codemod-cli@rwjblue/codemod-cli#1e080835dd8ffecb1e0795a897e6b3b0d1da281d:
-  version "2.1.0"
-  resolved "https://codeload.github.com/rwjblue/codemod-cli/tar.gz/1e080835dd8ffecb1e0795a897e6b3b0d1da281d"
+codemod-cli@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/codemod-cli/-/codemod-cli-3.0.0.tgz#d590f382a102a1edc6080ede67896c533749a81e"
+  integrity sha512-oZOkKcpHSNaLHkdhwp+1PDXzWTzx+5rkbc3TGCHnZg/tAtDGNlSU+24zkzTMm31+XxAxqt3Da323UZKxudWRBw==
   dependencies:
     "@babel/parser" "^7.6.0"
     chalk "^2.4.2"
