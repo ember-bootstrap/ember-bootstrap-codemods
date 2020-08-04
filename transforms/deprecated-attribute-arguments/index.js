@@ -170,3 +170,5 @@ module.exports = function ({ source /*, path*/ }, { parse, visit }) {
 
   return visit(ast, visitor);
 };
+
+module.exports.type = 'hbs';

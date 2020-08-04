@@ -1668,9 +1668,9 @@ co@^4.6.0:
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
   integrity sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=
 
-codemod-cli@simonihmig/codemod-cli#template-support:
+codemod-cli@rwjblue/codemod-cli#1e080835dd8ffecb1e0795a897e6b3b0d1da281d:
   version "2.1.0"
-  resolved "https://codeload.github.com/simonihmig/codemod-cli/tar.gz/954ad68d9033c1408421f9c7610586ac36088dbc"
+  resolved "https://codeload.github.com/rwjblue/codemod-cli/tar.gz/1e080835dd8ffecb1e0795a897e6b3b0d1da281d"
   dependencies:
     "@babel/parser" "^7.6.0"
     chalk "^2.4.2"
