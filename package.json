@@ -1,7 +1,7 @@
 {
   "name": "ember-bootstrap-codemods",
   "description": "Codemods to ease upgrading of ember-bootstrap",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Simon Ihmig <simon.ihmig@kaliber5.de",
   "license": "MIT",
   "repository": "github:kaliber5/ember-bootstrap-codemods",
