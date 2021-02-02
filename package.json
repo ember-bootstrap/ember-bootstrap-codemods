@@ -5,7 +5,7 @@
   "keywords": [
     "codemod-cli"
   ],
-  "repository": "github:kaliber5/ember-bootstrap-codemods",
+  "repository": "https://github.com/kaliber5/ember-bootstrap-codemods",
   "license": "MIT",
   "author": "Simon Ihmig <simon.ihmig@kaliber5.de",
   "bin": "./bin/cli.js",
