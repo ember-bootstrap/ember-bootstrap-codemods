@@ -1,25 +1,28 @@
 {
   "name": "ember-bootstrap-codemods",
-  "description": "Codemods to ease upgrading of ember-bootstrap",
   "version": "0.1.2",
-  "author": "Simon Ihmig <simon.ihmig@kaliber5.de",
-  "license": "MIT",
+  "description": "Codemods to ease upgrading of ember-bootstrap",
+  "keywords": [
+    "codemod-cli"
+  ],
   "repository": "github:kaliber5/ember-bootstrap-codemods",
-  "scripts": {
-    "lint": "eslint --cache .",
-    "test": "codemod-cli test",
-    "test:coverage": "codemod-cli test --coverage",
-    "update-docs": "codemod-cli update-docs",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
-  },
+  "license": "MIT",
+  "author": "Simon Ihmig <simon.ihmig@kaliber5.de",
+  "bin": "./bin/cli.js",
   "files": [
     "bin",
     "transforms"
   ],
-  "bin": "./bin/cli.js",
-  "keywords": [
-    "codemod-cli"
-  ],
+  "scripts": {
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+    "lint": "eslint --cache .",
+    "test": "codemod-cli test",
+    "test:coverage": "codemod-cli test --coverage",
+    "update-docs": "codemod-cli update-docs"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "dependencies": {
     "codemod-cli": "^3.1.1"
   },
@@ -30,12 +33,29 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "jest": "^26.6.3",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "release-it": "^14.2.1",
+    "release-it-lerna-changelog": "^3.1.0"
   },
   "engines": {
     "node": "10.* || >= 12"
   },
-  "jest": {
-    "testEnvironment": "node"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }
