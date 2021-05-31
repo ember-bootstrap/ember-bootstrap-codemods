@@ -24,7 +24,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "codemod-cli": "^3.1.2"
+    "codemod-cli": "^3.2.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.6",
